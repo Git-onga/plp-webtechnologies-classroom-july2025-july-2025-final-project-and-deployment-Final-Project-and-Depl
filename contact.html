@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Tamu City</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .contact-page {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-page h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <h1 class="logo">Tamu City</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="order.html" class="nav-link">Order</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="cart">
+                <div class="indicator">0</div>
+                <a href="order.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="contact-page">
+        <h1>Contact Us</h1>
+        
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+            <p><i class="fas fa-envelope"></i> support@tamucity.com</p>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </main>
+    <footer class="site-footer">
+            <div class="container footer-content">
+            <h2 class="footer-logo">Tamu City</h2>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2025 Tamu City. All Rights Reserved.</p>
+            </div>
+        </footer>
+</body>
+</html>

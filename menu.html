@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tamu City | Menu</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <header class="site-header">
+                <div class="container header-content">
+                    <h1 class="logo">Tamu City</h1>
+                    <nav class="main-nav">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Menu</a>
+                        <a href="order.html" class="nav-link">Order</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </nav>
+                    <div class="cart">
+                        <div class="indicator">0</div>
+                        <a href="order.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </header>
+
+        <!-- Menu Section -->
+        <main class="menu-content">
+            <section class="menu">
+                <h1 style="align-items: center;">Our Menu</h1>
+                <div class="menu-container" id="menu-container">
+                    <!-- Dishes will be loaded here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <h2 class="footer-logo">Tamu City</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>&copy; 2025 Tamu City. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JS for fetching menu -->
+        <script src="data/cart-utils.js"></script>
+        <script src="menu.js"></script>
+
+    </body>
+</html>
