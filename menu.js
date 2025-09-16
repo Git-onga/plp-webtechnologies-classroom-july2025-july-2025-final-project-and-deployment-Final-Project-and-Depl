@@ -56,11 +56,10 @@ const menuItems = [
         image: "https://www.keepingthepeas.com/wp-content/uploads/2021/06/low-calorie-lentil-soup-2.jpg"
     }
 ];
-
-const container = document.getElementById("menu-container");
 let cart = getCart();
-// localStorage.clear();
+const container = document.getElementById("menu-container");
 
+// Render all menu items
 menuItems.forEach(item => {
     const dishCard = document.createElement("div");
     dishCard.classList.add("dish-card");
@@ -70,32 +69,37 @@ menuItems.forEach(item => {
         <h3>${item.name}</h3>
         <p>${item.description}</p>
         <span class="price">Ksh ${item.price}</span>
-        <button class="add-to-cart" data-item-id="${item.id}"><i class="fas fa-cart-plus"></i> Add</button>
+        <button class="add-to-cart" data-id="${item.id}">
+            <i class="fas fa-cart-plus"></i> Add
+        </button>
     `;
 
-    
-
     container.appendChild(dishCard);
-}); 
-// Add event listener to the button
-document.querySelectorAll(".add-to-cart")
-    .forEach((button) => {
-        button.addEventListener('click', () => {
-            const itemId = button.dataset.itemId;
-            const item = menuItems.find(m => m.id == itemId);
-            addToCart(item);
-        });
+});
+
+// Handle Add-to-Cart clicks
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+        const itemId = button.dataset.id;
+        const item = menuItems.find(m => m.id == itemId);
+        addToCart(item);
     });
-  
+});
+
 function addToCart(item) {
-    const existing = cart.find(cartItemId => cartItemId.id === item.id);
+    // Always get the latest cart from storage
+    let cart = getCart();
+    console.log("Before adding: " + cart.lenght)
+
+    const existing = cart.find(cartItem => cartItem.id === item.id);
     if (existing) {
         existing.quantity += 1;
     } else {
         cart.push({ ...item, quantity: 1 });
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(item);
+    saveCart(cart);
+    updateCartCount();
 
+    console.log("After adding: " + cart.lenght); // check results
 }

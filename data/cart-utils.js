@@ -13,11 +13,13 @@ function updateCartCount() {
     if (!countSpan) return;
 
     let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    countSpan.textContent = totalItems;
+    countSpan.innerHTML = totalItems;
 
     // Hide badge if 0
     countSpan.style.display = totalItems === 0 ? "none" : "inline-block";
+    console.log(totalItems);
 }
 
 // Run on page load
 updateCartCount();
+
