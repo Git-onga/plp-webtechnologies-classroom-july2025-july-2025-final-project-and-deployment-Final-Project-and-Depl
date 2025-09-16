@@ -1,10 +1,10 @@
-##🍴 Tamu City Website
+🍴## Tamu City Website
 
 Tamu City is a simple food ordering website built with HTML, CSS, and JavaScript.
 It allows users to browse a menu, add items to their cart, and place an order through a checkout page.
 
 --
-##🚀 Features
+🚀 ## Features
 
 🏠 Home Page – Welcoming landing page with navigation.
 
@@ -15,7 +15,7 @@ It allows users to browse a menu, add items to their cart, and place an order th
 📩 Contact Page – Users can send inquiries or feedback.
 
 --
-##🛠️ Tech Stack
+🛠️## Tech Stack
 
 Frontend: HTML5, CSS3, JavaScript (Vanilla)
 
@@ -24,4 +24,4 @@ Storage: LocalStorage (to persist cart data)
 Icons: Font Awesome
 
 --
-##🤖 Live Demo
+🤖## Live Demo
